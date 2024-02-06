@@ -1,19 +1,17 @@
-// import logo from './logo.svg';
-import './App.css';
-import Footer from './Footer';
-import POPOSList from './POPOSList';
+import { Outlet } from 'react-router-dom'
 
+import './App.css';
 import Title from './Title';
+import Footer from './Footer';
+import POPOSDetails from './POPOSDetails'
 
 function App() {
   return (
-    <div className="App">
-      {/* <img src={logo} alt="" /> */}
+    <div>
       <Title />
-      <POPOSList />
+      <Outlet />
       <Footer />
     </div>
-
   );
 }
 
