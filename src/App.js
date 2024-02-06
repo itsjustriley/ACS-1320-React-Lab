@@ -1,5 +1,6 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import POPOSList from './POPOSList';
 
 import Title from './Title';
 
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       {/* <img src={logo} alt="" /> */}
       <Title />
+      <POPOSList />
     </div>
   );
 }
