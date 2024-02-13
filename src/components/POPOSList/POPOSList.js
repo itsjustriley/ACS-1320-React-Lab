@@ -1,17 +1,21 @@
 import React from 'react';
 import POPOSSpace from '../POPOSSpace/POPOSSpace';
 import './POPOSList.css';
-import data from '../../sfpopos-data.json'
+import data from '../../sfpopos-data.js'
+import { useState } from 'react'
 
 
 
 function POPOSList() {
-
-  const spaces = data.map(( { title, address, images, hours}, i) => {
+  const [ query, setQuery ] = useState('')
+  const spaces = data
+  .filter(obj => obj.title.toLowerCase().includes(query) || obj.address.toLowerCase().includes(query))
+  .map(({ id, title, address, images, hours }) => {
+	// const spaces = data.map(({ title, address, images, hours }, i) => {
     return (
       <POPOSSpace
-        id={i}
-        key={title}
+        id={id}
+        key={`${title}-${id}`}
         name={title}
         address={address}
         image={images[0]}
@@ -22,8 +26,16 @@ function POPOSList() {
 
   return (
     <div className="POPOSList">
-      { spaces }
-    </div>
+    <form>
+      <input
+        value={query}
+        placeholder="search"
+        onChange={(e) => setQuery(e.target.value)}
+      />
+      <button type="submit">Submit</button>
+    </form>
+    {spaces}
+  </div>
   )
 }
 
