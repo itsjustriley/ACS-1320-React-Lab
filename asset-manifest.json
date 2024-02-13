@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ACS-1320-React-Lab/static/css/main.02307206.css",
+    "main.js": "/ACS-1320-React-Lab/static/js/main.2fd5b96b.js",
+    "static/js/592.037074cc.chunk.js": "/ACS-1320-React-Lab/static/js/592.037074cc.chunk.js",
+    "index.html": "/ACS-1320-React-Lab/index.html",
+    "main.02307206.css.map": "/ACS-1320-React-Lab/static/css/main.02307206.css.map",
+    "main.2fd5b96b.js.map": "/ACS-1320-React-Lab/static/js/main.2fd5b96b.js.map",
+    "592.037074cc.chunk.js.map": "/ACS-1320-React-Lab/static/js/592.037074cc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02307206.css",
+    "static/js/main.2fd5b96b.js"
+  ]
+}
